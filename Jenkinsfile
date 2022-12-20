@@ -6,7 +6,7 @@ node{
          * docker build on the command line */
 
 
-	docker build -t coursework2:1.0 .
+	docker build -t (coursework2:1.0 .)
     }
 
 
