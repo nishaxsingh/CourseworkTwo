@@ -10,8 +10,8 @@ stages {
 }
 	stage('container') {
             steps {
-		sh 'docker run -d --name container20 coursework2:1.0'
-		sh 'docker exec container20 echo "container is running'
+		sh 'docker run -d --name container21 coursework2:1.0'
+		sh 'docker exec container21 echo "container is running'
     }
 }
 	stage('push image') {
