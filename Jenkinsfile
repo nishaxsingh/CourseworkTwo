@@ -22,15 +22,6 @@ stages {
 		echo 'pushing image'
     }
 }
-	stage('deploy') {
-	    steps {
-              kubernetes.withCluster('my-cluster') {
-                def deployment = kubernetes.loadDeployment("my-deployment")
-                kubernetes.rollingUpdate(deployment)
-
-     }
-    }
-  }
-	}
-	}
+}
+}
 
