@@ -11,8 +11,8 @@ stages {
 }
 	stage('container') {
             steps {
-		sh 'docker run -d --name container-cw2 coursework2:1.0'
-		sh 'docker exec container-cw2 echo "container is running"'
+		sh 'docker run -d --name container-cw2-test coursework2:1.0'
+		sh 'docker exec container-cw2-test echo "container is running"'
 		echo 'building container'
     }
 }
@@ -22,6 +22,15 @@ stages {
 		echo 'pushing image'
     }
 }
-}
-}
+	stage('deploy') {
+	    steps {
+              kubernetes.withCluster('my-cluster') {
+                def deployment = kubernetes.loadDeployment("my-deployment")
+                kubernetes.rollingUpdate(deployment)
+
+     }
+    }
+  }
+	}
+	}
 
