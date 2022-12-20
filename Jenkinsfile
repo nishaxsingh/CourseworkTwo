@@ -11,8 +11,8 @@ stages {
 }
 	stage('container') {
             steps {
-		sh 'docker run -d --name container-cw2-test coursework2:1.0'
-		sh 'docker exec container-cw2-test echo "container is running"'
+		sh 'docker run -d --name container-cw2-video coursework2:1.0'
+		sh 'docker exec container-cw2-video echo "container is running"'
 		echo 'building container'
     }
 }
