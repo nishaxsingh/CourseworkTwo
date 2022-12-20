@@ -16,7 +16,7 @@ stages {
 }
 	stage('push image') {
             steps {
-		sh 'docker push $nishaxsingh/coursework2:1.0'
+		sh 'docker push nishaxsingh/coursework2:1.0'
     }
 	}
       }
