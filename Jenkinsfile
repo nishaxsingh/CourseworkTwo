@@ -29,5 +29,6 @@ stages {
                 kubernetes.rollingUpdate(deployment)
 }
 }
-      }
+}
+}
 }
